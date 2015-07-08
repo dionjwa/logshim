@@ -1,0 +1,23 @@
+class AssertDefault
+{
+#if (debug || keep_asserts)
+	public static function that(condition :Bool, ?message :String, ?extra :Dynamic, ?pos :haxe.PosInfos):Void
+	{
+	    if(!condition) {
+	    	fail(message, extra, pos);
+	    }
+	}
+	public static function fail(message :String, ?extra :Dynamic, ?pos :haxe.PosInfos)
+	{
+        var error = "Assertion failed!";
+        if (message != null) {
+            error += " " + message;
+        }
+		Log.error(error, extra, pos);
+        throw error;
+	}
+#else
+	inline public static function that(condition :Bool, ?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) {}
+	inline public static function fail(message :String, ?extra :Dynamic, ?pos :haxe.PosInfos) {}
+#end
+}

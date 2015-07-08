@@ -1,0 +1,12 @@
+{
+  "name": "logshim",
+  "license": "MIT",
+  "tags": ["log","logging","logs"],
+  "description": "Shim for logging in different platforms and logging libraries. Use this as a default.",
+  "contributors": ["dionjwa"],
+  "releasenote": "Initial release",
+  "version": "0.0.1",
+  "url": "https://github.com/dionjwa/logshim",
+  "dependencies": {},
+  "classPath": "src"
+}
