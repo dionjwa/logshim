@@ -1,23 +1,32 @@
 class LogDefault
 {
-	inline public static function debug (?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) :Void
+	inline public static function debug (?message :Dynamic, ?extra :Array<Dynamic>, ?pos :haxe.PosInfos) :Void
 	{
 		haxe.Log.trace(message + (extra != null ? " [" + extra.join(", ") + "]" : ""), pos);
 	}
 
-	inline public static function info (?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) :Void
+	inline public static function info (?message :Dynamic, ?extra :Array<Dynamic>, ?pos :haxe.PosInfos) :Void
 	{
 		haxe.Log.trace(message + (extra != null ? " [" + extra.join(", ") + "]" : ""), pos);
 	}
 
-	inline public static function warn (?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) :Void
+	inline public static function warn (?message :Dynamic, ?extra :Array<Dynamic>, ?pos :haxe.PosInfos) :Void
 	{
 		haxe.Log.trace(message + (extra != null ? " [" + extra.join(", ") + "]" : ""), pos);
 	}
 
-	inline public static function error (?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) :Void
+	inline public static function error (?message :Dynamic, ?extra :Array<Dynamic>, ?pos :haxe.PosInfos) :Void
 	{
-		haxe.Log.trace(message + (extra != null ? " [" + extra.join(", ") + "]" : ""), pos);
+		haxe.Log.trace('ERROR: ' + message + (extra != null ? " [" + extra.join(", ") + "]" : ""), pos);
+	}
+
+	static function log (?message :Dynamic, ?extra :Array<Dynamic>, pos :haxe.PosInfos) :Void
+	{
+		// if (extra != null) {
+		// 	haxe.Log.trace(message + (extra != null ? " [" + extra.join(", ") + "]" : ""), pos);
+		// } else {
+			haxe.Log.trace(message, pos);
+		// }
 	}
 
 	//Webkit extra calls
