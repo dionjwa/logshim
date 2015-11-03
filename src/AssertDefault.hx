@@ -23,8 +23,8 @@ class AssertDefault
         throw error;
 	}
 #else
-	inline public static function that(condition :Bool, ?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) {}
-	inline public static function notNull(condition :Bool, ?message :Dynamic, ?pos :haxe.PosInfos) {}
-	inline public static function fail(message :String, ?extra :Dynamic, ?pos :haxe.PosInfos) {}
+	inline public static function that(_ :Dynamic, ?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) {}
+	inline public static function notNull(_ :Dynamic, ?message :Dynamic, ?pos :haxe.PosInfos) {}
+	inline public static function fail(_ :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) {}
 #end
 }
