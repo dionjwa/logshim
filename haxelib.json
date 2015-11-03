@@ -4,8 +4,8 @@
   "tags": ["log","logging","logs"],
   "description": "Shim for logging in different platforms and logging libraries. Use this as a default.",
   "contributors": ["dionjwa"],
-  "releasenote": "Compatibility fixes.",
-  "version": "0.0.2",
+  "releasenote": "Fix non-debug version.",
+  "version": "0.0.3",
   "url": "https://github.com/dionjwa/logshim",
   "dependencies": {},
   "classPath": "src"
