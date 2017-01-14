@@ -80,4 +80,13 @@ class LogMConsole
 			Console.error(message, pos);
 		}
 	}
+
+	inline public static function critical (message :Dynamic, ?extra: Dynamic, ?pos :haxe.PosInfos) :Void
+	{
+		if (extra != null) {
+			Console.error([message, extra], pos);
+		} else {
+			Console.error(message, pos);
+		}
+	}
 }

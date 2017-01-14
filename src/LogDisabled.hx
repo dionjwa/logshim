@@ -6,6 +6,7 @@ class LogDisabled
 	inline public static function info (?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) :Void {}
 	inline public static function warn (?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) :Void {}
 	inline public static function error (?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) :Void {}
+	inline public static function critical (?message :Dynamic, ?extra :Dynamic, ?pos :haxe.PosInfos) :Void {}
 	inline public static function assert (condition :Bool, ?message :String, ?extra :Dynamic, ?pos :haxe.PosInfos) :Void {}
 
 	//Webkit extra calls

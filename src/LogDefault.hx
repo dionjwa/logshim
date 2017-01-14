@@ -20,13 +20,14 @@ class LogDefault
 		haxe.Log.trace('ERROR: ' + message + (extra != null ? " [" + extra.join(", ") + "]" : ""), pos);
 	}
 
+	inline public static function critical (?message :Dynamic, ?extra :Array<Dynamic>, ?pos :haxe.PosInfos) :Void
+	{
+		haxe.Log.trace('CRITICAL: ' + message + (extra != null ? " [" + extra.join(", ") + "]" : ""), pos);
+	}
+
 	static function log (?message :Dynamic, ?extra :Array<Dynamic>, pos :haxe.PosInfos) :Void
 	{
-		// if (extra != null) {
-		// 	haxe.Log.trace(message + (extra != null ? " [" + extra.join(", ") + "]" : ""), pos);
-		// } else {
-			haxe.Log.trace(message, pos);
-		// }
+		haxe.Log.trace(message, pos);
 	}
 
 	//Webkit extra calls

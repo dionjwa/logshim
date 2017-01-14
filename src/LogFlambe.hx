@@ -12,6 +12,11 @@ class LogFlambe extends flambe.util.PackageLog
 		info(message, extra);
 	}
 
+	inline public static function critical (message :String, ?extra :Dynamic) :Void
+	{
+		error(message, extra);
+	}
+
 	//Webkit extra calls
 	inline public static function count (id :String) :Void {}
 	inline public static function enterDebugger () :Void {}

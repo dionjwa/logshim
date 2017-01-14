@@ -5,7 +5,7 @@
   "description": "Shim for logging in different platforms and logging libraries. Use this as a default.",
   "contributors": ["dionjwa"],
   "releasenote": "Fix non-debug version.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "url": "https://github.com/dionjwa/logshim",
   "dependencies": {},
   "classPath": "src"
